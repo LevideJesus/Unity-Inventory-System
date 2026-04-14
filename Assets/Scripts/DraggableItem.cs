@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    Transform parentAfterDrag;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        parentAfterDrag = transform.parent;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -14,7 +15,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        
+        transform.SetParent(transform.root);
     }
 
 
