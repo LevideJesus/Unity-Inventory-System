@@ -4,14 +4,25 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
+    private CanvasGroup canvasGroup;
+
     [HideInInspector] public Transform parentAfterDrag;
+
+
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
-        image.raycastTarget = false;
+
+        canvasGroup.blocksRaycasts = false;
+
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -22,7 +33,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.SetParent(parentAfterDrag);
-        image.raycastTarget = true;
+        canvasGroup.blocksRaycasts = true;
+
 
     }
 
