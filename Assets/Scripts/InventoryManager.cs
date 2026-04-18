@@ -1,16 +1,18 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public InventorySlot[] inventorySlot;
+   public void AddItem(InventoryItem item)
+   {
+
+   }
+    
+    void SpawnNewItem(InventoryItem item, InventorySlot slot)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
