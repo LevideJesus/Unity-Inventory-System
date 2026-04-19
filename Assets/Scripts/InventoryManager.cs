@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
+    public GameObject inventoryItemPrefab;
     public InventorySlot[] inventorySlots;
    public void AddItem(InventoryItem item)
    {
@@ -20,6 +21,7 @@ public class InventoryManager : MonoBehaviour
     
     void SpawnNewItem(InventoryItem item, InventorySlot slot)
     {
+        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
 
     }
 
