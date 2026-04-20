@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5330558636335624074
+--- !u!1 &7236408797685601591
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2651552610578689787}
-  - component: {fileID: 442552840498887815}
-  - component: {fileID: 8207690882576978222}
-  - component: {fileID: 4516370374389034811}
-  - component: {fileID: 361326459277845706}
+  - component: {fileID: 6412959709782225274}
+  - component: {fileID: 8575429635196673643}
+  - component: {fileID: 3592355915134834187}
+  - component: {fileID: 1430270931354509763}
+  - component: {fileID: 7973917612052253378}
   m_Layer: 5
-  m_Name: InventoryItem
+  m_Name: Item_knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2651552610578689787
+--- !u!224 &6412959709782225274
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330558636335624074}
+  m_GameObject: {fileID: 7236408797685601591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -37,23 +37,23 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &442552840498887815
+--- !u!222 &8575429635196673643
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330558636335624074}
+  m_GameObject: {fileID: 7236408797685601591}
   m_CullTransparentMesh: 1
---- !u!114 &8207690882576978222
+--- !u!114 &3592355915134834187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330558636335624074}
+  m_GameObject: {fileID: 7236408797685601591}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -77,33 +77,29 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4516370374389034811
+--- !u!114 &1430270931354509763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330558636335624074}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d0b32c2480b9446b51f7fb211a1d49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  image: {fileID: 0}
-  itemSprite: {fileID: 0}
-  parentAfterDrag: {fileID: 0}
---- !u!114 &361326459277845706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330558636335624074}
+  m_GameObject: {fileID: 7236408797685601591}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51d0b32c2480b9446b51f7fb211a1d49, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  image: {fileID: 8207690882576978222}
-  itemSprite: {fileID: 0}
+  m_EditorClassIdentifier: '::'
+  image: {fileID: 3592355915134834187}
   parentAfterDrag: {fileID: 0}
+--- !u!225 &7973917612052253378
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236408797685601591}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

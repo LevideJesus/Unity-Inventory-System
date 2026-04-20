@@ -1,16 +1,15 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class DemoScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public InventoryManager inventoryManager;
+    public ItemData[] itemsToPickup;
 
-    // Update is called once per frame
-    void Update()
+    public void PickupItem(int id)
     {
-        
+    
+        inventoryManager.AddItem(itemsToPickup[id]);
     }
 }

@@ -6,6 +6,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
   
     private CanvasGroup canvasGroup;
     public Image image; 
+    public Sprite itemSprite;
 
     [HideInInspector] public Transform parentAfterDrag;
 
@@ -39,9 +40,9 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     }
      
-    public void InitialiseItem(InventoryItem item) 
+    public void InitialiseItem(ItemData itemData) 
     {
-        
+        image.sprite = itemData.icon;
     }
 
 
