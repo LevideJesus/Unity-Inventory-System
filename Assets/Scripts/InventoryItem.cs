@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
   
     private CanvasGroup canvasGroup;
+    public Image image; 
 
     [HideInInspector] public Transform parentAfterDrag;
 
@@ -35,6 +37,11 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup.blocksRaycasts = true;
 
 
+    }
+     
+    public void InitialiseItem(InventoryItem item) 
+    {
+        
     }
 
 

@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public GameObject inventoryItemPrefab;
     public InventorySlot[] inventorySlots;
+
    public void AddItem(InventoryItem item)
    {
         for(int i = 0; i < inventorySlots.Length; i++)
@@ -18,11 +21,12 @@ public class InventoryManager : MonoBehaviour
             }
         }
    }
-    
+ 
     void SpawnNewItem(InventoryItem item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
+        inventoryItem.InitialiseItem(item);
         
 
     }
