@@ -6,9 +6,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
   
     private CanvasGroup canvasGroup;
     public Image image; 
+    public Text countText;
     public Sprite itemSprite;
-
     [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector] public int count = 1;
 
 
     private void Awake()
@@ -43,7 +44,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void InitialiseItem(ItemData itemData) 
     {
         image.sprite = itemData.icon;
+        RefreshCount();
     }
 
+    public void RefreshCount()
+    {
+        countText.text = count.ToString();
+    }
 
 }
