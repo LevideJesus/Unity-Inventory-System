@@ -8,10 +8,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
     public InventorySlot[] inventorySlots;
 
-   public void AddItem(ItemData item)
+   public bool AddItem(ItemData item)
    {
-        
-
     for(int i = 0; i < inventorySlots.Length; i++)
     {
         InventorySlot slot = inventorySlots[i];
@@ -27,10 +25,11 @@ public class InventoryManager : MonoBehaviour
         {
             
             SpawnNewItem(item, slot);
-            return;
+            return true;
         }
+        
    }
- 
+    return false;
     void SpawnNewItem(ItemData item, InventorySlot slot)
     {
         
