@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
   
     private CanvasGroup canvasGroup;
     public Image image; 
-    public Text countText;
+    public TextMeshProUGUI countText;
     public Sprite itemSprite;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public int count = 1;
@@ -50,6 +51,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void RefreshCount()
     {
         countText.text = count.ToString();
+        bool textActive = count > 1;
+        countText.gameObject.SetActive(textActive);
     }
 
 }
