@@ -5,6 +5,8 @@ using TMPro;
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
   
+    public ItemData item;
+
     private CanvasGroup canvasGroup;
     public Image image; 
     public TextMeshProUGUI countText;
@@ -44,6 +46,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
      
     public void InitialiseItem(ItemData itemData) 
     {
+        item = itemData;
+        
         image.sprite = itemData.icon;
         RefreshCount();
     }

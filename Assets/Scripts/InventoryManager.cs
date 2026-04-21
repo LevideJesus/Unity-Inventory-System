@@ -5,11 +5,35 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
+    public ItemData item;
+
+    public int maxStackedItems = 10;
     public GameObject inventoryItemPrefab;
     public InventorySlot[] inventorySlots;
 
    public bool AddItem(ItemData item)
    {
+
+    for(int i = 0; i < inventorySlots.Length; i++)
+    {
+        InventorySlot slot = inventorySlots[i];
+
+        if (slot == null)
+        {
+            continue;
+        }
+
+        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+
+       
+        if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && item.stackable == true)
+        {
+            
+            itemInSlot.count++;
+            itemInSlot.RefreshCount();
+            return true;
+        }
+   }
     for(int i = 0; i < inventorySlots.Length; i++)
     {
         InventorySlot slot = inventorySlots[i];
