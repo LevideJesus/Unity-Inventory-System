@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Coin
   icon: {fileID: 3234001637869761286, guid: 234f2ee2127cd8249a09955c14636ffc, type: 3}
+  stackable: 1

@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d0b32c2480b9446b51f7fb211a1d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
+  item: {fileID: 0}
   image: {fileID: 3899846596165193400}
   countText: {fileID: 8692229823333613308}
   itemSprite: {fileID: 0}

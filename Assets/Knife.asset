@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Knife
   icon: {fileID: 6773622677511742121, guid: e74fafdcabd10d946bfddf431858d9eb, type: 3}
+  stackable: 1
